@@ -24,8 +24,12 @@ The recipe implements the following architecture:
 The architecture consists of the following components:
 
 * **S3 bucket**: The S3 bucket is used to store the training data and the training output.
-* **Lambda function**: The Lambda function is used to train the model. The function is triggered by a signal sent by S3.
+* **Lambda function**: The Lambda function is used to train the model. The function is triggered by a signal sent by S3. This function is using `Python3.9` runtime and `x86_64` architecture. 
+* The lambda function contains **two** layers (that could be found in `layers/` folder) with the required libraries to train the model:
+    * `pandas:1.5.3` + `numpy:1.24.2`
+    * `scikit-learn:1.2.2`
 
+An example already predefined using an anomaly detection algorithm that is provided in `lambda/lambda_function.py` file. Inside `data` folder you can find a sample dataset to train the model.
 
 ## Usage
 
