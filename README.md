@@ -3,7 +3,7 @@ Seenons recipe for serverless Machine Learning in AWS.
 
 ## Introduction
 
-This repository contains the code for the Seenons recipe for serverless Machine Learning in AWS. The recipe is described in detail in the [Seenons blog](https://seenons.com/blog/2019/03/01/serverless-machine-learning-in-aws/).
+This repository contains the code for the Seenons recipe for serverless Machine Learning in AWS. This is aimed to train light models and make batch predictions. 
 
 ## Installation
 
@@ -25,7 +25,7 @@ The architecture consists of the following components:
 
 * **S3 bucket**: The S3 bucket is used to store the training data and the training output.
 * **Lambda function**: The Lambda function is used to train the model. The function is triggered by a signal sent by S3. This function is using `Python3.9` runtime and `x86_64` architecture. 
-* The lambda function contains **two** layers (that could be found in `layers/` folder) with the required libraries to train the model:
+* **Lambda layers**: The lambda function contains **two** layers (that could be found in `layers/` folder) with the required libraries to train the model:
     * `pandas:1.5.3` + `numpy:1.24.2`
     * `scikit-learn:1.2.2`
 
