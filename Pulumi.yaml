@@ -1,0 +1,6 @@
+name: aws-anomalies-serverless
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Deploy an AWS stack for reactive and serverless Machine Learning
